@@ -1,0 +1,866 @@
+/* Genel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #d4af37;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Genel Başlık Stili */
+.heading {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.heading span {
+    color: var(--main-color);
+}
+
+/* Navbar */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: 0.4s ease;
+}
+
+.header.sticky {
+    background: var(--bg-color);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+    padding: 1.5rem 9%;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--main-color);
+}
+
+.navbar a {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 2.8rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+    transition: 0.3s ease;
+}
+
+#menu-icon:hover {
+    color: var(--main-color);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    padding: 7rem 9% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.hero-content h3 span {
+    color: var(--main-color);
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 1rem 0;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+    color: #a0bacc;
+}
+
+.btn-box {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2.5rem;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: 0.4s ease;
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--main-color);
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--main-color);
+}
+
+.btn-secondary:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+.hero-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container {
+    width: 350px;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--main-color);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hakkında */
+.about {
+    padding: 8rem 9% 2rem;
+    background: var(--second-bg-color);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1 1 40rem;
+}
+
+.about-text h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--main-color);
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #a0bacc;
+}
+
+.skill-cards {
+    flex: 1 1 30rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 5px solid var(--main-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+
+.skill-card i {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.skill-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.skill-card p {
+    font-size: 0.95rem;
+    color: #a0bacc;
+}
+
+/* Deneyimler */
+.experience {
+    padding: 8rem 9% 2rem;
+    background: var(--bg-color);
+}
+
+.experience-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.experience-box {
+    background: var(--second-bg-color);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.4s ease;
+    border: 2px solid transparent;
+}
+
+.experience-box:hover {
+    transform: translateY(-10px);
+    border-color: var(--main-color);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+.experience-img {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: #000;
+}
+
+.experience-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+    opacity: 0.8;
+}
+
+.experience-box:hover .experience-img img {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.experience-info {
+    padding: 2rem;
+    text-align: center;
+}
+
+.experience-info h4 {
+    font-size: 1rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.experience-info h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.experience-info p {
+    font-size: 0.95rem;
+    color: #a0bacc;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.2rem;
+    background: transparent;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.action-btn:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+
+/* YENİ: GALERİ BÖLÜMÜ (Slider) */
+.gallery {
+    padding: 8rem 9% 5rem;
+    background: var(--second-bg-color);
+    /* About ile aynı renk ayrım için */
+}
+
+.gallery-title {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.swiper {
+    width: 100%;
+    padding-bottom: 3rem;
+    /* Pagination (noktalar) için boşluk */
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    /* Her bir slaydın genişliği */
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    border: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.swiper-slide:hover {
+    border-color: var(--main-color);
+    transform: scale(1.05);
+}
+
+.swiper-slide img,
+.swiper-slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 4rem;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.swiper-slide:hover .video-overlay {
+    color: var(--main-color);
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Eğitim & Sertifikalar */
+.education {
+    padding: 8rem 9% 2rem;
+    background: var(--bg-color);
+}
+
+.education-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.education-column {
+    flex: 1 1 30rem;
+}
+
+.education-column .title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.education-box {
+    border-left: 3px solid var(--main-color);
+}
+
+.education-content {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.education-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -11px;
+    width: 20px;
+    height: 20px;
+    background: var(--main-color);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+.education-content .content {
+    background: var(--second-bg-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+}
+
+.education-content .content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+
+.education-content .year {
+    font-size: 1rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.education-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.education-content p {
+    font-size: 1rem;
+    color: #a0bacc;
+}
+
+/* Footer / İletişim */
+.footer {
+    background: var(--second-bg-color);
+    padding: 6rem 9% 3rem;
+    text-align: center;
+}
+
+.footer-text h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.footer-text h2 span {
+    color: var(--main-color);
+}
+
+.footer-text p {
+    color: #a0bacc;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+.footer-contact {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.3rem;
+    color: var(--main-color);
+}
+
+.contact-item i {
+    font-size: 2rem;
+    background: var(--bg-color);
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: var(--main-color);
+    transition: 0.4s ease;
+}
+
+.social-icons a:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #a0bacc;
+}
+
+.footer-bottom a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background: var(--main-color);
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.footer-bottom a i {
+    font-size: 1.5rem;
+    color: var(--bg-color);
+}
+
+.footer-bottom a:hover {
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+
+/* ================= MODALLAR (Açılır Pencereler) ================= */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-box {
+    position: relative;
+    background: var(--second-bg-color);
+    border-radius: 10px;
+    border: 2px solid var(--main-color);
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    transform: scale(0.8);
+    transition: 0.3s ease;
+}
+
+.modal-overlay.active .modal-box {
+    transform: scale(1);
+}
+
+.map-box {
+    height: 70vh;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Asla kaybolmayan sağlam kapatma butonu */
+.solid-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+    background: #ff3333;
+    /* Dikkat çekici kırmızı */
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 9999;
+    /* En üstte durmasını garantiler */
+    box-shadow: 0 0 15px rgba(255, 51, 51, 0.5);
+    transition: 0.3s;
+}
+
+.solid-close-btn:hover {
+    background: #cc0000;
+    transform: scale(1.1);
+}
+
+/* Lightbox İçerik Ayarları */
+.lightbox-content {
+    width: 90%;
+    max-width: 1000px;
+    max-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content img,
+.lightbox-content video {
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    border: 3px solid var(--main-color);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+}
+
+/* ---------------- MOBİL UYUM (RESPONSIVE) ---------------- */
+@media (max-width: 1024px) {
+    .header {
+        padding: 2rem 5%;
+    }
+
+    .header.sticky {
+        padding: 1.5rem 5%;
+    }
+
+    .hero {
+        padding: 8rem 5% 2rem;
+        gap: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .img-container {
+        width: 300px;
+    }
+
+    .about,
+    .experience,
+    .gallery,
+    .education {
+        padding: 6rem 5% 2rem;
+    }
+
+    .footer {
+        padding: 6rem 5% 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--second-bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        display: none;
+        flex-direction: column;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1.3rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 8rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .btn-box {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .img-container {
+        width: 250px;
+    }
+
+    .heading {
+        font-size: 2.8rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 500px;
+    /* 250px'den 380px'e çıkardım. Fotoğraflar daha uzun, ferah ve profesyonel duracak */
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    border: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.swiper-slide img,
+.swiper-slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    /* Galerideki fotoğraflarda da kafanın kesilmesini önler */
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    /* Odak noktasını en üste çeker, kafanın üstü kırpılmaz */
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 2rem 5%;
+        /* Sağdan ve soldan %5 boşluk garantisi verir */
+    }
+
+    #menu-icon {
+        display: block;
+        position: absolute;
+        /* İkonu esnek yapıdan kurtarıp özgür bırakır */
+        right: 5%;
+        /* Sağdan %5 boşluk bırakarak çerçeve içine alır */
+        top: 50%;
+        transform: translateY(-50%);
+        /* Tam dikey olarak ortalar */
+        z-index: 10001;
+        /* Tıklanabilirliği garanti altına almak için en üste taşır */
+    }
+
+    /* ... (Altındaki .navbar ayarları aynı kalacak) ... */
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--second-bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        display: none;
+        flex-direction: column;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1.3rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        margin-left: 0;
+    }
+
+
+}

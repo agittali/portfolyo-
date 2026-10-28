@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agit Tali | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Swiper JS CSS (Galeri için) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- ScrollReveal.js -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="header">
+        <a href="#" class="logo">Agit<span>.</span></a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Ana Sayfa</a>
+            <a href="#about">Hakkında</a>
+            <a href="#experience">Deneyimler</a>
+            <a href="#gallery">Galeri</a> <!-- Yeni Galeri Linki -->
+            <a href="#education">Eğitim</a>
+            <a href="#contact">İletişim</a>
+        </nav>
+    </header>
+
+    <!-- Hero Bölümü -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h3 class="reveal-left">Merhaba, Ben</h3>
+            <h1 class="reveal-left">Agit Tali</h1>
+            <h3 class="reveal-left"><span>Yiyecek İçecek İşletmecisi</span></h3>
+            <p class="reveal-bottom">Hizmet kalitesi ve misafir memnuniyetine odaklı, dinamik ortamlara kolay adapte
+                olan disiplinli bir profesyonel. Akademik eğitimimi pratikle birleştirerek sektörde fark yaratmayı
+                hedefliyorum.</p>
+
+            <div class="btn-box reveal-bottom">
+                <a href="#experience" class="btn">Deneyimlerimi Gör</a>
+                <a href="#contact" class="btn btn-secondary">İletişime Geç</a>
+            </div>
+        </div>
+
+        <div class="hero-img reveal-right">
+            <div class="img-container">
+                <img src="img/agit.jpeg" alt="Agit Tali">
+            </div>
+        </div>
+    </section>
+
+    <!-- Hakkında Bölümü -->
+    <section class="about" id="about">
+        <h2 class="heading reveal-top">Hakkımda <span>Bilgiler</span></h2>
+        <div class="about-content">
+            <div class="about-text reveal-left">
+                <h3>Gastronomi ve Hizmet Sanatına Tutkulu Bir İşletmeci</h3>
+                <p>Muğla Sıtkı Koçman Üniversitesi Yiyecek ve İçecek İşletmeciliği Bölümü 3. sınıf öğrencisi olarak
+                    eğitimime devam ediyorum. Gastronomiyi yalnızca yemek sunumundan ibaret görmüyor; misafirlere
+                    keyifli, kaliteli ve unutulmaz deneyimler yaşatmanın önemli bir parçası olarak değerlendiriyorum.
+
+                    Hizmet kalitesini ve misafir memnuniyetini ön planda tutan, disiplinli, dinamik ve takım çalışmasına
+                    yatkın biriyim. Yoğun çalışma temposuna kolayca uyum sağlayarak kendimi geliştirmeye ve yeni
+                    deneyimler kazanmaya önem veriyorum. Sıcak ve soğuk mutfak eğitimlerimle edindiğim bilgi ve
+                    becerileri, sahadaki pratik deneyimlerimle pekiştirerek gastronomi sektöründe kendimi geliştirmeyi
+                    ve alanında yetkin, başarılı bir profesyonel olmayı hedefliyorum.</p>
+            </div>
+
+            <div class="skill-cards reveal-right">
+                <div class="skill-card">
+                    <i class='bx bx-star'></i>
+                    <h4>Misafir Odaklılık</h4>
+                    <p>Müşteri değil misafir; yüksek standartlarda hizmet kalitesi ve memnuniyet.</p>
+                </div>
+                <div class="skill-card">
+                    <i class='bx bx-sync'></i>
+                    <h4>Dinamik Uyum</h4>
+                    <p>Stres altında sakin kalabilme ve hızlı tempoya anında adapte olma yeteneği.</p>
+                </div>
+                <div class="skill-card">
+                    <i class='bx bx-book-reader'></i>
+                    <h4>Akademik Vizyon</h4>
+                    <p>Modern işletme prensiplerini gastronomi pratiğiyle birleştiren yenilikçi bakış.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deneyimler Bölümü -->
+    <section class="experience" id="experience">
+        <h2 class="heading reveal-top">İş <span>Deneyimlerim</span></h2>
+        <div class="experience-container">
+
+            <!-- 1. Hapimag Resort -->
+            <div class="experience-box reveal-bottom">
+                <div class="experience-img">
+                    <img src="img/hapimag.avif" alt="Hapimag Resort Sea Garden">
+                </div>
+                <div class="experience-info">
+                    <h4>F&B Restoran Komisi</h4>
+                    <h3>Hapimag Resort</h3>
+                    <p>Bodrum'un en prestijli tesislerinden birinde yüksek standartlarda misafir memnuniyeti ve elit
+                        servis hizmeti sağladım.</p>
+                    <div class="action-buttons">
+                        <button class="action-btn map-btn"
+                            onclick="openMap('https://maps.google.com/maps?q=Hapimag+Resort+Sea+Garden,+Bodrum,+Çiftlik,+Yalıdağ+Cd+No+40,+48400+Bodrum/Muğla&t=&z=14&ie=UTF8&iwloc=&output=embed')"><i
+                                class='bx bx-map'></i> Konumu Gör</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Afytos Bodrum -->
+            <div class="experience-box reveal-bottom">
+                <div class="experience-img">
+                    <img src="img/afytos.jpg" alt="Afytos Bodrum">
+                </div>
+                <div class="experience-info">
+                    <h4>F&B Restoran Komisi</h4>
+                    <h3>Afytos Bodrum</h3>
+                    <p>Dinamik bir ekip ortamında restoran işleyişine destek vererek servis kalitesinin artırılmasında
+                        görev aldım.</p>
+                    <div class="action-buttons">
+                        <button class="action-btn map-btn"
+                            onclick="openMap('https://maps.google.com/maps?q=Gümbet,+Oramiral+Kemal+Kayacan+Cd.+No:28,+48400+Bodrum/Muğla&t=&z=15&ie=UTF8&iwloc=&output=embed')"><i
+                                class='bx bx-map'></i> Konumu Gör</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Bodrum City -->
+            <div class="experience-box reveal-bottom">
+                <div class="experience-img">
+                    <img src="img/bodrumcity.jpg" alt="Bodrum City">
+                </div>
+                <div class="experience-info">
+                    <h4>F&B Restoran Komisi</h4>
+                    <h3>Bodrum City</h3>
+                    <p>Şehir içi yoğun hizmet temposuna ayak uydurarak hızlı ve etkili yiyecek-içecek servisi tecrübesi
+                        edindim.</p>
+                    <div class="action-buttons">
+                        <button class="action-btn map-btn"
+                            onclick="openMap('https://maps.google.com/maps?q=Gümbet,+Oramiral+Kemal+Kayacan+Cd.+No:28,+48400+Bodrum/Muğla&t=&z=15&ie=UTF8&iwloc=&output=embed')"><i
+                                class='bx bx-map'></i> Konumu Gör</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YENİ: GALERİ BÖLÜMÜ -->
+    <section class="gallery" id="gallery">
+        <h2 class="heading reveal-top">Çalışma <span>Galerim</span></h2>
+
+        <!-- Fotoğraflar Slider -->
+        <div class="gallery-wrapper reveal-left">
+            <h3 class="gallery-title"><i class='bx bx-camera'></i> Fotoğraflar</h3>
+            <div class="swiper photoSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Fotoğraflarını buraya ekle -->
+                    <div class="swiper-slide" onclick="openLightbox('image', 'img/foto1.jpeg')"><img
+                            src="img/foto1.jpeg" alt="Galeri"></div>
+                    <div class="swiper-slide" onclick="openLightbox('image', 'img/foto2.jpeg')"><img
+                            src="img/foto2.jpeg" alt="Galeri"></div>
+                    <div class="swiper-slide" onclick="openLightbox('image', 'img/foto3.jpeg')"><img
+                            src="img/foto3.jpeg" alt="Galeri"></div>
+                    <div class="swiper-slide" onclick="openLightbox('image', 'img/foto4.jpeg')"><img
+                            src="img/foto4.jpeg" alt="Galeri"></div>
+                    <div class="swiper-slide" onclick="openLightbox('image', 'img/foto5.jpeg')"><img
+                            src="img/foto5.jpeg" alt="Galeri"></div>
+                    <div class="swiper-slide" onclick="openLightbox('image', 'img/foto6.jpeg')"><img
+                            src="img/foto6.jpeg" alt="Galeri"></div>
+                    <!-- İstersen sayıyı artırabilirsin -->
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <!-- Videolar Slider -->
+        <div class="gallery-wrapper reveal-right" style="margin-top: 4rem;">
+            <h3 class="gallery-title"><i class='bx bx-video'></i> Videolar</h3>
+            <div class="swiper videoSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Videolarını buraya ekle. "data-src" kısmına videonun dosya adını yaz -->
+                    <div class="swiper-slide" onclick="openLightbox('video', 'videos/avideo1.mp4')">
+                        <div class="video-overlay"><i class='bx bx-play-circle'></i></div>
+                        <video src="videos/avideo1.mp4" muted></video>
+                    </div>
+                    <div class="swiper-slide" onclick="openLightbox('video', 'videos/avideo2.mp4')">
+                        <div class="video-overlay"><i class='bx bx-play-circle'></i></div>
+                        <video src="videos/avideo2.mp4" muted></video>
+                    </div>
+                    <div class="swiper-slide" onclick="openLightbox('video', 'videos/avideo3.mp4')">
+                        <div class="video-overlay"><i class='bx bx-play-circle'></i></div>
+                        <video src="videos/avideo3.mp4" muted></video>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eğitim Bölümü -->
+    <section class="education" id="education">
+        <h2 class="heading reveal-top">Eğitim & <span>Sertifikalar</span></h2>
+        <div class="education-row">
+            <div class="education-column reveal-left">
+                <h3 class="title">Eğitim Hayatım</h3>
+                <div class="education-box">
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i> 2024 - Devam Ediyor</div>
+                            <h3>Muğla Sıtkı Koçman Üniversitesi</h3>
+                            <p>Yiyecek İçecek İşletmeciliği, 3. Sınıf Öğrencisi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="education-column reveal-right">
+                <h3 class="title">Sahip Olduğum Belgeler</h3>
+                <div class="education-box">
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i> 2026</div>
+                            <h3>Aşçı Çırağı Belgesi</h3>
+                            <p>Profesyonel mutfak operasyonları ve temel aşçılık pratikleri sertifikasyonu.</p>
+                        </div>
+                    </div>
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i> 2026</div>
+                            <h3>İş Sağlığı ve Güvenliği</h3>
+                            <p>Endüstriyel mutfak ve restoran alanlarında güvenli çalışma prosedürleri eğitimi.</p>
+                        </div>
+                    </div>
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i> 2026</div>
+                            <h3>Hijyen Belgesi</h3>
+                            <p>Gıda güvenliği, sanitasyon ve kişisel hijyen standartları sertifikasyonu.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / İletişim -->
+    <footer class="footer" id="contact">
+        <div class="footer-text">
+            <h2>İletişime <span>Geç</span></h2>
+            <p>Benimle projeler, iş fırsatları veya gastronomi üzerine sohbet etmek için aşağıdaki kanallardan
+                ulaşabilirsiniz.</p>
+        </div>
+        <div class="footer-contact reveal-bottom">
+            <div class="contact-item">
+                <i class='bx bx-phone'></i>
+                <span>+90 541 582 7843</span>
+            </div>
+            <div class="contact-item">
+                <i class='bx bx-envelope'></i>
+                <span>taliagit06@gmail.com</span>
+            </div>
+        </div>
+        <div class="social-icons reveal-bottom">
+
+            <a href="https://www.instagram.com/agittl_/"><i class='bx bxl-instagram'></i></a>
+            <a href="index.html"><i class='bx bx-link'></i></a>
+        </div>
+        <div class="footer-bottom">
+            <p>Tüm Hakları Saklıdır &copy; 2026 Agit Tali</p>
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <!-- HARİTA MODAL (Güncellendi: Sabit Kapatma Tuşu) -->
+    <div id="mapModal" class="modal-overlay">
+        <div class="modal-box map-box">
+            <div class="solid-close-btn" onclick="closeMapModal()"><i class='bx bx-x'></i></div>
+            <iframe id="mapIframe" src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <!-- LIGHTBOX MODAL (Fotoğraf ve Video Tam Ekran İçin) -->
+    <div id="lightboxModal" class="modal-overlay">
+        <div class="solid-close-btn" onclick="closeLightbox()"><i class='bx bx-x'></i></div>
+        <div class="lightbox-content" id="lightboxContent">
+            <!-- JS ile İçerik Buraya Gelecek -->
+        </div>
+    </div>
+
+    <!-- Swiper JS Kütüphanesi -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
